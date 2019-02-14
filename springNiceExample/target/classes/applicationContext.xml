@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="placa"
+        class="br.gov.sp.fatec.Placa">
+        <property name="mensagem" ref="mensagem"/>
+    </bean>
+    <bean id="mensagem"
+        class="br.gov.sp.fatec.HelloWorld">
+        <property name="nome" value="Sei la"/>
+    </bean>
+    <bean id="mensagem2"
+        class="br.gov.sp.fatec.HelloWorld" scope="prototype">
+        <property name="nome" value="Ze Ninguem"/>
+    </bean>
+    
+    <bean id="outfit" class="br.gov.sp.fatec.Outfit">
+    
+    </bean>
+    
+    <bean id="camisa" class="br.gov.sp.fatec.PecaRoupa"> 
+        <property name="tipo" value="camisa"/>
+        <property name="marca" value="adidas"/>
+        <property name="tamanho" value="M"/>
+        <property name="preco" value="58.00"/>
+    </bean>
+    
+    <bean id="calca" class="br.gov.sp.fatec.PecaRoupa"> 
+        <property name="tipo" value="calca"/>
+        <property name="marca" value="Tiger"/>
+        <property name="tamanho" value="M"/>
+        <property name="preco" value="120.00"/>
+    </bean>
+    
+    <bean id="moletom" class="br.gov.sp.fatec.PecaRoupa"> 
+        <property name="tipo" value="moletom"/>
+        <property name="marca" value="Nike"/>
+        <property name="tamanho" value="M"/>
+        <property name="preco" value="199.90"/>
+    </bean>
+    
+    <bean id="cinto" class="br.gov.sp.fatec.PecaRoupa"> 
+        <property name="tipo" value="cinto"/>
+        <property name="marca" value="Off-White"/>
+        <property name="tamanho" value="M"/>
+        <property name="preco" value="1543.00"/>
+    </bean>
+    
+</beans>
