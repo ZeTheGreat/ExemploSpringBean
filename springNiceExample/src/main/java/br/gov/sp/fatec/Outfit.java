@@ -1,10 +1,13 @@
 package br.gov.sp.fatec;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Outfit implements QuantoCusta{
-	
+
 	private List<PecaRoupa> roupas;
 	private String ocasiao;
 	private Integer pecas;
@@ -12,7 +15,7 @@ public class Outfit implements QuantoCusta{
 	
 	public Outfit() {
 		super();
-		roupas = new ArrayList<PecaRoupa>();
+		roupas = new ArrayList<>();
 	}
 
 	public List<PecaRoupa> getRoupas() {

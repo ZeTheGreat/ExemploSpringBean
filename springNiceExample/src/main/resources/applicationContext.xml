@@ -4,18 +4,6 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-    <bean id="placa"
-        class="br.gov.sp.fatec.Placa">
-        <property name="mensagem" ref="mensagem"/>
-    </bean>
-    <bean id="mensagem"
-        class="br.gov.sp.fatec.HelloWorld">
-        <property name="nome" value="Sei la"/>
-    </bean>
-    <bean id="mensagem2"
-        class="br.gov.sp.fatec.HelloWorld" scope="prototype">
-        <property name="nome" value="Ze Ninguem"/>
-    </bean>
     
     <bean id="outfit" class="br.gov.sp.fatec.Outfit">
     
@@ -47,6 +35,17 @@
         <property name="marca" value="Off-White"/>
         <property name="tamanho" value="M"/>
         <property name="preco" value="1543.00"/>
+    </bean>
+
+    <bean id="roupas" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="calca"/>
+                <ref bean="camisa"/>
+                <ref bean="moletom"/>
+                <ref bean="cinto"/>
+            </list>
+        </constructor-arg>
     </bean>
     
 </beans>
